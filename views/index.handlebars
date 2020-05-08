@@ -1,0 +1,80 @@
+<h3 class="card-title" style="text-align:center; font-family:fantasy;">你想對誰說幹話 <i class="fas fa-meh-rolling-eyes"></i>
+</h3>
+<hr>
+<div class="container py-5">
+  <form method="POST" action="/">
+
+    <div class="row justify-content-center align-items-center">
+
+      <div class="col-12 col-md-4">
+        <div class="card text-center" style="width:18rem; height:20rem;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            class="card-img-top" alt="error" style="width:100%; height: 80%;">
+          <div class="card-body">
+            <div class="form-check form-check-inline">
+              <div>
+                <input class="form-check-input" type="radio" name="role" id="engineer" value="engineer">
+                <label class="form-check-label" for="inlineRadio1">工程師</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card text-center" style="width: 18rem; height: 20rem;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            class="card-img-top" alt="error" style="width:100%; height: 80%;">
+          <div class="card-body">
+            <div class="form-check form-check-inline">
+              <div>
+                <input class="form-check-input" type="radio" name="role" id="designer" value="designer">
+                <label class="form-check-label" for="inlineRadio2">設計師</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card text-center" style="width:18rem; height: 20rem;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            class="card-img-top" alt="error" style="width:100%; height: 80%;">
+          <div class="card-body">
+            <div class="form-check form-check-inline">
+              <div>
+                <input class="form-check-input" type="radio" name="role" id="entrepreneur" value="entrepreneur">
+                <label class="form-check-label" for="inlineRadio2">創業家</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row align-items-end">
+        <div class="col-4">
+          <button class="btn btn-success bg-dark m-2" type="submit" style="width: 80%; height: 5rem;">Generate trash
+            talk</button>
+        </div>
+
+        <div class="col-">
+          <div style="border: 2px solid; margin: 4px 5px; width: 25rem; height: 5rem; text-align: center;">
+            {{#if trashtalk}}
+            <div class="alert">
+              <span>身為一個</span>
+              {{role}}
+              <span>,</span>
+              <span>{{trashtalk}}</span>
+              <span>吧!</span>
+            </div>
+            {{/if}}
+          </div>
+
+        </div>
+      </div>
+
+
+  </form>
+</div>
