@@ -40,7 +40,11 @@ function generatetrashtalk(options) {
   // console.log(collection)
 
   //return error notice if options.role is none
-  if (options = '') {
+  // if (options = '') {
+  //   return '請先選擇噴幹話的對象'
+  // }
+  // 上列程式有誤，依助教指導修正如下
+  if (!options.role) {
     return '請先選擇噴幹話的對象'
   }
 
